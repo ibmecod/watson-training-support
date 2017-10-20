@@ -44,7 +44,8 @@ This section has various code snippets relevant to participants' interests that 
 
 #### Calling Watson NLU via a proxy using the Watson Java SDK
 
-**Note:** This must be compiled with the [Watson Java SDK](https://github.com/watson-developer-cloud/java-sdk/releases)
+**Note:** This must be compiled with the <a href="https://github.com/watson-developer-cloud/java-sdk/releases" target="_blank">Watson Java SDK</a>
+
 
 ```java
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.NaturalLanguageUnderstanding;
