@@ -100,12 +100,11 @@ the investment.
     
     ![](images/image4.png)
 
-  Select **Import File** and then drag and drop or select the file ***Watson Visual Recognition.postman_collection.json*** from the
-folder where your unzipped the lab files
+    Select **Import File** and then drag and drop or select the file ***Watson Visual Recognition.postman_collection.json*** from the folder where your unzipped the lab files
 
-   Verify that 6 members of a collection entitled *Watson Visual Recognition* were imported
+    Verify that 6 members of a collection entitled *Watson Visual Recognition* were imported
 
-   ![](images/image5.png)
+    ![](images/image5.png)
 
 Section 2. Execute REST calls against your instance of Watson Visual Recognition
 ================================================================================
@@ -125,15 +124,15 @@ train and then use a custom classifier.
     
     ![](images/image7.png)
 
-  Click on **Params** and then paste your API key into the **Value** column for the **api_key** parameter
+    Click on **Params** and then paste your API key into the **Value** column for the **api_key** parameter
 
-   ![](images/image8.tiff)
+    ![](images/image8.tiff)
 
-  Click the **Send** button to send the request
+    Click the **Send** button to send the request
   
-  Verify that a JSON response is returned. Scroll through the results to see the default classifier’s analysis of this image.
+    Verify that a JSON response is returned. Scroll through the results to see the default classifier’s analysis of this image.
 
-   ![](images/image9.png)
+    ![](images/image9.png)
 
 2.  Next you’ll use the face detection capability on this image:
     
@@ -175,27 +174,28 @@ train and then use a custom classifier.
     
     Click on **Params** and then paste your API key into the **Value** column for the **api_key** parameter.
 
-   Next click on **Body** to see the Form Data that is being passed to the request. Add the following files from the files you unzipped for this lab by clicking on **Choose Files** next to the corresponding parameter
+    Next click on **Body** to see the Form Data that is being passed to the request. Add the following files from the files you unzipped for this lab by clicking on **Choose Files** next to the corresponding parameter
 
-   i.  Select ***beagle.zip*** for **beagle_positive_examples**
+    i.  Select ***beagle.zip*** for **beagle_positive_examples**
 
-   ii. Select ***husky.zip*** for **husky_positive_eaxamples**
+    ii. Select ***husky.zip*** for **husky_positive_eaxamples**
 
-   iii. Select ***golden_retriever.zip*** for
+    iii. Select ***golden_retriever.zip*** for
     **goldenretriver_positive_examples**
 
-   iv. Select ***cats.zip*** for **negative_examples**
+    iv. Select ***cats.zip*** for **negative_examples**
 
-    When you’re done the **Body** should look like this:
+     When you’re done the **Body** should look like this:
 
     ![](images/image14.png)
     
     Click the **Send** button to send the request The request will take awhile to complete as all the files need to be uploaded to the service
 
     Copy and paste the returned **classifier_id** to the same file as your api_key. You’ll need this is the next steps:
-   ![](images/image15.png)
+
+    ![](images/image15.png)
    
-1.  Custom classifiers are trained asynchronously so in this step you’ll
+5.  Custom classifiers are trained asynchronously so in this step you’ll
     check the status of the custom classifier you just created.
     
     In Postman select the fifth request in the imported collection. A
@@ -217,7 +217,7 @@ train and then use a custom classifier.
     
     Keep sending this request until the status changes to *ready*
 
-2.  In this final part of the exercise you’ll run the following image
+6.  In this final part of the exercise you’ll run the following image
     against both your custom classifier and the default classifier.
     
     ![](images/image17.tiff)    
