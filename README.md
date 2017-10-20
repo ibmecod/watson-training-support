@@ -4,18 +4,18 @@ Watson Training Support
 This project is used to support  Watson  training sessions at various clients conductcd by IBM Developer Advocates. Because this is a public repo, it contains no client specific information. Note however that  the content may be updated over time to support different training sessions. It is  therefore recommended that you clone  the project at the time of your training session so the material will match the agenda of your session.
 
 
-##Watson API Guide for Developers
+## Watson API Guide for Developers
 
 The [Watson API Guide for Developers](WatsonAPIGuideForDevelopersV1.0.pdf) is a summary of the information presented at the training session. It contains links to relevant information and resources and has a one page summary of each Watson API.
 
 
-##Labs
+## Labs
 
 These are the instructions and all supporting files for the hands-on-lab exercises.
 
 The hands on lab exercises are:
 
-###Lab 1 - Watson Visual Recognition
+### Lab 1 - Watson Visual Recognition
 In this lab, you will familiarize yourself with the Watson Visual Recognition service by learning how to classify, detect faces in, and recognize text in an image, and how to create, train and then use a custom classifier. **Note**: This lab requires the free [Postman](https://www.getpostman.com) REST client that is available for Mac, Windows and Linux.  
 
 [Markdown format](labs/watsonvr/README.md)
@@ -37,12 +37,12 @@ Use the Discovery tooling to run various queries against Discovery News - an exi
  [PDF Format](labs/watsonconv/WatsonConversationIntro.pdf)
  
  
-##Code snippets
+## Code snippets
 This section has various code snippets relevant to participants' interests that are  not easily found  in the Watson API document
 
-###Java snippets
+### Java snippets
 
-####Calling Watson NLU via a proxy using the Watson Java SDK
+#### Calling Watson NLU via a proxy using the Watson Java SDK
 
 **Note:** This must be compiled with the [Watson Java SDK](https://github.com/watson-developer-cloud/java-sdk/releases)
 
@@ -81,7 +81,7 @@ public class CallNLUViaProxy {
 }
 ```
  
-####Calling Watson NLU via a proxy using the NLU REST interface
+#### Calling Watson NLU via a proxy using the NLU REST interface
 
 **Note:** This must be compiled with the [Jackson JSON API](https://github.com/FasterXML/jackson)
 
@@ -155,9 +155,9 @@ public class CallNLURESTViaProxy {
 }
 ```
  
-##Python snippets
+## Python snippets
 
-####Calling Watson NLU via a proxy using the Watson Python SDK
+#### Calling Watson NLU via a proxy using the Watson Python SDK
 
 ```python
 import json
@@ -187,7 +187,7 @@ print(json.dumps(response, indent=2))
 
 ```
 
-####Calling Watson NLU via a proxy using the NLU REST interface
+#### Calling Watson NLU via a proxy using the NLU REST interface
 
 ```python
 import json
