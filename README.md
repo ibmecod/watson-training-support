@@ -56,28 +56,27 @@ import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.Fe
 
 public class CallNLUViaProxy {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
 
-		// Set proxy here
-		System.setProperty("https.proxyHost", "nnn.nnn.nnn.nnn");
-		System.setProperty("https.proxyPort", "nnnn");
-		
-       // Set your own NLU credentails here
-		NaturalLanguageUnderstanding service = new NaturalLanguageUnderstanding(
-				NaturalLanguageUnderstanding.VERSION_DATE_2017_02_27, "username", "password");
-				
-		Map<String, String> headers = new HashMap<String, String>();
-		headers.put(HttpHeaders.X_WATSON_LEARNING_OPT_OUT, "True");
-		service.setDefaultHeaders(headers);
+        // Set proxy here
+        System.setProperty("https.proxyHost", "nnn.nnn.nnn.nnn");
+        System.setProperty("https.proxyPort", "nnnn");
+        // Set your own NLU credentails here
+        NaturalLanguageUnderstanding service = new NaturalLanguageUnderstanding(
+                NaturalLanguageUnderstanding.VERSION_DATE_2017_02_27, "username", "password");
+                
+        Map<String, String> headers = new HashMap<String, String>();
+        headers.put(HttpHeaders.X_WATSON_LEARNING_OPT_OUT, "True");
+        service.setDefaultHeaders(headers);
 
-		EntitiesOptions entities = new EntitiesOptions.Builder().sentiment(true).limit(1).build();
-		Features features = new Features.Builder().entities(entities).build();
-		AnalyzeOptions parameters = new AnalyzeOptions.Builder().url("www.cnn.com").features(features).build();
-		AnalysisResults results = service.analyze(parameters).execute();
-		System.out.println("Results\n" + results.toString());
+        EntitiesOptions entities = new EntitiesOptions.Builder().sentiment(true).limit(1).build();
+        Features features = new Features.Builder().entities(entities).build();
+        AnalyzeOptions parameters = new AnalyzeOptions.Builder().url("www.cnn.com").features(features).build();
+        AnalysisResults results = service.analyze(parameters).execute();
+        System.out.println("Results\n" + results.toString());
 
-	}
+    }
 
 }
 ```
@@ -99,58 +98,58 @@ import javax.net.ssl.HttpsURLConnection;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class CallNLURESTViaProxy {
-	
-	public static void main(String[] args) throws IOException {
-		
+    
+    public static void main(String[] args) throws IOException {
+        
         String baseURL = "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze";
-		
+        
         // Set proxy here
-		System.setProperty("https.proxyHost", "nnn.nnn.nnn.nnn");
-		System.setProperty("https.proxyPort", "nnnn");
-		
-		// Set up query parameters
-		StringBuilder queryParams = new StringBuilder("?version=2017-02-27");
-		queryParams.append("&url=www.cnn.com");
-		queryParams.append("&features=entities");
-		queryParams.append("&entities.sentiment=true");
-		
-		// Set up GET request 
-		URL url = new URL(baseURL + queryParams.toString());
-		HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-		connection.setRequestMethod("GET");
-		connection.setRequestProperty("X-Watson-Learning-Opt-Out", "True");
-		
-		// Set your NLU username and password below
-		String authStr = Base64.getEncoder()
+        System.setProperty("https.proxyHost", "nnn.nnn.nnn.nnn");
+        System.setProperty("https.proxyPort", "nnnn");
+        
+        // Set up query parameters
+        StringBuilder queryParams = new StringBuilder("?version=2017-02-27");
+        queryParams.append("&url=www.cnn.com");
+        queryParams.append("&features=entities");
+        queryParams.append("&entities.sentiment=true");
+        
+        // Set up GET request 
+        URL url = new URL(baseURL + queryParams.toString());
+        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        connection.setRequestProperty("X-Watson-Learning-Opt-Out", "True");
+        
+        // Set your NLU username and password below
+        String authStr = Base64.getEncoder()
                 .encodeToString("username:password".getBytes());
-		
+        
         //setting Authorization header
         connection.setRequestProperty("Authorization", "Basic " + authStr);
         
         // Send request
         int responseCode = connection.getResponseCode();
-		System.out.println("Sending 'GET' request to URL : " + url);
-		System.out.println("Response Code : " + responseCode);
+        System.out.println("Sending 'GET' request to URL : " + url);
+        System.out.println("Response Code : " + responseCode);
 
-		// Read returned JSON as a String 
-		BufferedReader in = new BufferedReader(
-		        new InputStreamReader(connection.getInputStream()));
-		String inputLine;
-		StringBuilder response = new StringBuilder();
+        // Read returned JSON as a String 
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(connection.getInputStream()));
+        String inputLine;
+        StringBuilder response = new StringBuilder();
 
-		while ((inputLine = in.readLine()) != null) {
-			response.append(inputLine);
-		}
-		in.close();
-		
-		// Use Jackson JSON lib to pretty print returned JSON
-		ObjectMapper mapper = new ObjectMapper();
-		Object json = mapper.readValue(response.toString(), Object.class);
-		String formattedJSON = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
-		System.out.println("JSON returned");
-		System.out.println(formattedJSON);
-		
-	}
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+        
+        // Use Jackson JSON lib to pretty print returned JSON
+        ObjectMapper mapper = new ObjectMapper();
+        Object json = mapper.readValue(response.toString(), Object.class);
+        String formattedJSON = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
+        System.out.println("JSON returned");
+        System.out.println(formattedJSON);
+        
+    }
 
 
 }
