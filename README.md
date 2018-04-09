@@ -4,9 +4,9 @@ Watson Training Support
 This project is used to support  Watson  training sessions at various clients conductcd by IBM Developer Advocates. Because this is a public repo, it contains no client specific information. Note however that  the content may be updated over time to support different training sessions. It is  therefore recommended that you clone  the project at the time of your training session so the material will match the agenda of your session.
 
 
-## Watson API Guide for Developers
+## Watson Services Guide for Developers
 
-The [Watson API Guide for Developers](WatsonAPIGuideForDevelopersV1.0.pdf) is a summary of the information presented at the training session. It contains links to relevant information and resources and has a one page summary of each Watson API.
+The [Watson Services Guide for Developers](WatsonServicesGuideForDevelopersV2.0.pdf) is a summary of the information presented at the training session. It contains links to relevant information and resources and has a one page summary of each Watson API.
 
 
 ## Labs
@@ -16,25 +16,25 @@ These are the instructions and all supporting files for the hands-on-lab exercis
 The hands on lab exercises are:
 
 ### Lab 1 - Watson Visual Recognition
-In this lab, you will familiarize yourself with the Watson Visual Recognition service by learning how to classify, detect faces in, and recognize text in an image, and how to create, train and then use a custom classifier. **Note**: This lab requires the free [Postman](https://www.getpostman.com) REST client that is available for Mac, Windows and Linux.  
+In this lab, you will familiarize yourself with the Watson Visual Recognition service by learning how to use the REST API to classify, detect faces in, and recognize text in an image, and how to create, train and then use a custom classifier. **Note**: This lab requires the free [Postman](https://www.getpostman.com) REST client that is available for Mac, Windows and Linux.  
 
-[Markdown format](labs/watsonvr/README.md)
+[HTML format](https://developer.ibm.com/code/labs/WatsonVisualRecognition-REST-API)
 
-[PDF format](labs/watsonvr/WatsonVisualRecognition.pdf)
+[PDF format](https://dal05.objectstorage.softlayer.net/v1/AUTH_a15c8b6e-036a-4e6f-90e3-bd500660b284/devadv-hands-on-labs/WatsonVisualRecognition-REST-API/WatsonVisualRecognitionRESTAPI_int.pdf)
 
 ### Lab 2 - Watson Discovery 
 Use the Discovery tooling to run various queries against Discovery News - an existing dataset of English-language news sources that is updated continuously, with approximately 300,000 new articles and blogs added daily. 
 
-[Markdown format](labs/watsondisc/README.md) 
+[HTML format](https://developer.ibm.com/code/labs/Watson-Discovery-News-Lab) 
 
-[PDF format](labs/watsondisc/WatsonDiscoveryNewsIntro.pdf)
+[PDF format](https://dal05.objectstorage.softlayer.net/v1/AUTH_a15c8b6e-036a-4e6f-90e3-bd500660b284/devadv-hands-on-labs/Watson-Discovery-News-Lab/DiscoveryNewsLabUpdate.pdf)
 
-### Lab 3 - Watson Conversation
- In this lab, you will familiarize yourself with the Watson Conversation service tooling by starting to develop a sample restaurant chatbot that handles reservations for a restaurant. This lab utilizes the new slots feature in the Conversation service that enables you to gather multiple pieces of information in a single dialog node and allow users of the chatbot to provide required information proactively.
+### Lab 3 - Watson Assistant (foremerly Watson Conversation)
+ In this lab, you will familiarize yourself with the Watson Assitant service tooling by starting to develop a sample restaurant chatbot that handles reservations for a restaurant. This lab utilizes the slots feature in the Assistant service that enables you to gather multiple pieces of information in a single dialog node and allow users of the chatbot to provide required information proactively.
  
- [Markdown format](labs/watsonconv/README.md)
+ [HTML  format](https://developer.ibm.com/code/labs/Watson-Conversation-Intro)
  
- [PDF Format](labs/watsonconv/WatsonConversationIntro.pdf)
+ [PDF Format](https://dal05.objectstorage.softlayer.net/v1/AUTH_a15c8b6e-036a-4e6f-90e3-bd500660b284/devadv-hands-on-labs/Watson-Conversation-Intro/WatsonAssistant.pdf)
  
  
 ## Code snippets
