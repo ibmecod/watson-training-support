@@ -29,7 +29,7 @@ Use the Discovery tooling to run various queries against Discovery News - an exi
 
 [PDF format](https://dal05.objectstorage.softlayer.net/v1/AUTH_a15c8b6e-036a-4e6f-90e3-bd500660b284/devadv-hands-on-labs/Watson-Discovery-News-Lab/DiscoveryNewsLabUpdate.pdf)
 
-### Lab 3 - Watson Assistant (foremerly Watson Conversation)
+### Lab 3 - Watson Assistant (formerly Watson Conversation)
  In this lab, you will familiarize yourself with the Watson Assitant service tooling by starting to develop a sample restaurant chatbot that handles reservations for a restaurant. This lab utilizes the slots feature in the Assistant service that enables you to gather multiple pieces of information in a single dialog node and allow users of the chatbot to provide required information proactively.
  
  [HTML  format](https://developer.ibm.com/code/labs/Watson-Conversation-Intro)
